@@ -6,9 +6,13 @@ const router = require('./routes');
 require('dotenv').config();
 
 // connect to mongodb database (create if non-existant)
-console.log('Process env:');
-console.log(process.env.DATABASE);
-mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.DATABASE, { useNewUrlParser: true, useUnifiedTopology: true },
+  (error) => {
+    if (error) {
+      console.log(`${error}: Cannot connect to database, make sure Mongod service is running`);
+      process.exit(1);
+    }
+  });
 
 // rest api
 const app = express();

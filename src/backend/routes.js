@@ -2,9 +2,18 @@ const express = require('express');
 const Todo = require('./models/Todo');
 
 const router = express.Router();
-router.get('/', (req, res) => {
+
+router.get('/', async (req, res) => {
+  // get todos
+  const todos = await Todo.find({});
+
+  // json reponse
+  res.json(todos);
+});
+
+router.get('/add', async (req, res) => {
   // create a new todo
-  Todo.create({
+  await Todo.create({
     title: 'Todo 1',
     date: Date(),
   });

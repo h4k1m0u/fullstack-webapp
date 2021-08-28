@@ -7,6 +7,9 @@ const app = express();
 app.set('view engine', 'pug');
 app.set('views', './templates');
 
+// serve static css/js files
+app.use(express.static('public'));
+
 // routes
 app.get('/', (req, res) => {
   // get todos by http request to server

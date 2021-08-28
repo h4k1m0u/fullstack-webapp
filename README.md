@@ -1,3 +1,7 @@
+# TODO
+**Add entry for each city with picture, title, map to geolocate it.**
+
+
 # Webapp
 - Back-end: Rest API json made with Express
 - Front-end: View templates made with Express too

@@ -1,6 +1,6 @@
 # Webapp
 - Back-end: Rest API json made with Express
-- Front-end: React
+- Front-end: View templates made with Express too
 
 
 # Prerequisites

@@ -1,3 +1,4 @@
+/* Server manages CRUD operations on Mongo database  */
 const express = require('express');
 const mongoose = require('mongoose');
 const router = require('./routes');
@@ -20,5 +21,5 @@ app.use(router);
 
 const port = 8000;
 app.listen(port, () => {
-  console.log(`Server run on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });
